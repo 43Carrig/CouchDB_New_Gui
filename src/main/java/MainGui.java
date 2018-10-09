@@ -9,6 +9,8 @@ public class MainGui extends JFrame{
     private JButton readButton;
     private JButton updateButton;
     private JButton deleteButton;
+    private JButton mapreduceButton;
+    private JButton allDocsButton;
 
 
     public MainGui() {
@@ -21,11 +23,6 @@ public class MainGui extends JFrame{
                 frame.pack();
 //                frame.setSize(350, 350);
                 frame.setVisible(true);
-
-
-
-//
-
             }
         });
         readButton.addActionListener(new ActionListener() {
@@ -59,7 +56,28 @@ public class MainGui extends JFrame{
                 frame.pack();
 //        frame.setSize(300, 300);
                 frame.setVisible(true);
-
+            }
+        });
+        mapreduceButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFrame frame = new JFrame("Mapreduce");
+                frame.setContentPane(new Mapreduce().Main);
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.pack();
+//        frame.setSize(300, 300);
+                frame.setVisible(true);
+            }
+        });
+        allDocsButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFrame frame = new JFrame("All Docs");
+                frame.setContentPane(new AllDocs().Main);
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.pack();
+//        frame.setSize(300, 300);
+                frame.setVisible(true);
             }
         });
     }

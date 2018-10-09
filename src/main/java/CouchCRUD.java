@@ -96,9 +96,9 @@ public class CouchCRUD { // REST
 
     }
 
-    public static void simpleMapReduce(String dbName)
+    public static List<JsonObject> simpleMapReduce(String dbName)//String dbName
     {
-        CouchDbClient dbClient = new CouchDbClient(dbName);
+        CouchDbClient dbClient = new CouchDbClient(dbName);//dbName
 
         /* MapReduce Design Document:
         {
@@ -118,8 +118,9 @@ public class CouchCRUD { // REST
         */
 
         List<JsonObject> allDocs = dbClient.view("views/byCarMake").reduce(true).group(true).query(JsonObject.class);
-        List<JsonObject> stuff = dbClient.view("views/byCarMake").includeDocs(true).key("Ford Fiesta XXX").query(JsonObject.class);
+        //List<JsonObject> stuff = dbClient.view("views/byCarMake").reduce(true).key("Ford Fiesta XXX").query(JsonObject.class);
 
+        return allDocs;
     }
 
 
