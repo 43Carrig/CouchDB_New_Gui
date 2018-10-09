@@ -33,9 +33,7 @@ public class CouchCRUD { // REST
 
     public static void putCarDetails(String id, String rev,String registration, Boolean isSold) //put/update // CustomerSale
     {
-
         CouchDbClient dbClient = new CouchDbClient();
-        //car = getCarFromId(id);
         Car car = new Car();
 
         car.set_id(id);
@@ -45,24 +43,6 @@ public class CouchCRUD { // REST
 
         dbClient.update(car);
         dbClient.shutdown();
-
-//        CouchDbClient dbClient = new CouchDbClient();
-//        Car car = getCarFromId(tagId);
-//
-//        try {
-//            List<PrivateSale> currentSales = car.getSales();
-//            currentSales.add(sale);
-//            car.setSales(currentSales);
-//        }
-//        catch (Exception e)
-//        {
-//            List<PrivateSale> newSales = new ArrayList<>();
-//            newSales.add(sale);
-//            car.setSales(newSales);
-//        }
-//
-//        dbClient.update(car);
-//        dbClient.shutdown();
     }
 
     public static void deleteCar(String id)

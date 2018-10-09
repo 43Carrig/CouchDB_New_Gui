@@ -6,24 +6,6 @@ public class AllDocs extends JFrame {
     public JPanel Main;
     private JButton allDocsButton;
     private JLabel allDocsLabel;
-    private JButton mapreduceButton;
-    private JLabel mapreduceLabel;
-    private JPanel left;
-    private JPanel right;
-    private JPanel bottom;
-    private JButton btnUpdate;
-    private JTextField tfBefore;
-    private JTextField tfCarId;
-    private JTextField tfCarRev;
-    private JTextField tfIsSold;
-    private JTextField tfCarRegistration;
-    private JLabel lblBefore;
-    private JLabel lblCarId;
-    private JLabel lblAfter;
-    private JLabel lblCarRegistration;
-    private JLabel lblCarIsSold;
-    private JLabel lblCarRev;
-    private JTextField tfAfter;
 
     public AllDocs() {
 

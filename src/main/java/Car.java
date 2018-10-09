@@ -6,6 +6,15 @@ public class Car {
     private String _rev;
     private Boolean isSold;
     private String registration;
+    private String carMake;
+    private String carModel;
+    private String year;
+    private String price;
+    private String fuelType;
+    private String engineSizeCC;
+    private String transmission;
+    private String color;
+    private String numberOfDoors;
 
     public Car()
     {
@@ -33,6 +42,94 @@ public class Car {
         this.registration = registration;
     }
 
+    public Car(String _id, String _rev, Boolean isSold, String registration, String carMake, String carModel, String year, String price, String fuelType, String engineSizeCC, String transmission, String color, String numberOfDoors) {
+        this._id = _id;
+        this._rev = _rev;
+        this.isSold = isSold;
+        this.registration = registration;
+        this.carMake = carMake;
+        this.carModel = carModel;
+        this.year = year;
+        this.price = price;
+        this.fuelType = fuelType;
+        this.engineSizeCC = engineSizeCC;
+        this.transmission = transmission;
+        this.color = color;
+        this.numberOfDoors = numberOfDoors;
+    }
+
+    public String getCarMake() {
+        return carMake;
+    }
+
+    public void setCarMake(String carMake) {
+        this.carMake = carMake;
+    }
+
+    public String getCarModel() {
+        return carModel;
+    }
+
+    public void setCarModel(String carModel) {
+        this.carModel = carModel;
+    }
+
+    public String getYear() {
+        return year;
+    }
+
+    public void setYear(String year) {
+        this.year = year;
+    }
+
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
+    }
+
+    public String getFuelType() {
+        return fuelType;
+    }
+
+    public void setFuelType(String fuelType) {
+        this.fuelType = fuelType;
+    }
+
+    public String getEngineSizeCC() {
+        return engineSizeCC;
+    }
+
+    public void setEngineSizeCC(String engineSizeCC) {
+        this.engineSizeCC = engineSizeCC;
+    }
+
+    public String getTransmission() {
+        return transmission;
+    }
+
+    public void setTransmission(String transmission) {
+        this.transmission = transmission;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public String getNumberOfDoors() {
+        return numberOfDoors;
+    }
+
+    public void setNumberOfDoors(String numberOfDoors) {
+        this.numberOfDoors = numberOfDoors;
+    }
+
     public String get_id() {
         return _id;
     }
@@ -54,7 +151,7 @@ public class Car {
     }
 
     public void setSold(Boolean sold) {
-        isSold = sold;
+        this.isSold = sold;
     }
 
     public String getRegistration() {
@@ -65,13 +162,23 @@ public class Car {
         this.registration = registration;
     }
 
+
     @Override
     public String toString() {
-        return  "Car{" +
-                ", Id: " + _id + '\'' +
-                ", Rev: " + _rev + '\'' +
-                ", Is Sold: " + isSold + '\'' +
-                ", Registration: " + registration +
+        return "Car{" +
+                "_id='" + _id + '\'' +
+                ", _rev='" + _rev + '\'' +
+                ", isSold=" + isSold +
+                ", registration='" + registration + '\'' +
+                ", carMake='" + carMake + '\'' +
+                ", carModel='" + carModel + '\'' +
+                ", year='" + year + '\'' +
+                ", price='" + price + '\'' +
+                ", fuelType='" + fuelType + '\'' +
+                ", engineSizeCC='" + engineSizeCC + '\'' +
+                ", transmission='" + transmission + '\'' +
+                ", color='" + color + '\'' +
+                ", numberOfDoors='" + numberOfDoors + '\'' +
                 '}';
     }
 }
