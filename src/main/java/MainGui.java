@@ -28,7 +28,7 @@ public class MainGui extends JFrame{
         readButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JFrame frame = new JFrame("Read DATA");
+                JFrame frame = new JFrame("Read Data");
                 frame.setContentPane(new Read().Main); //
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 frame.pack();

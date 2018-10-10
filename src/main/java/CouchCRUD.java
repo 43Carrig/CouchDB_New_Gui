@@ -84,7 +84,7 @@ public class CouchCRUD { // REST
               "reduce": "_count"
             },
             "byCarName": {
-               "map": "function(doc)" {if('name' in doc) { emit (doc.name, doc._id); }}"
+               "map": "function(doc)" {if('name' in doc) { emit (doc.carModel, doc._id); }}"
             }
           },
           "language": "javascript"

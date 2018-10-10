@@ -46,8 +46,6 @@ public class Update extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                //CouchCRUD.putCarDetails(tfCarId.getText(), tfCarRev.getText(),tfCarRegistration.getText(), Boolean.valueOf(tfIsSold.getText()));
-
                 Car car = new Car();
                 car.set_id(tfCarId.getText());
                 car.set_rev(tfCarRev.getText());

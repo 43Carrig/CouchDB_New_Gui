@@ -29,7 +29,6 @@ public class Car {
     public Car(String _id, Boolean isSold,String registration)
     {
         this._id = _id;
-        this._rev = _rev;
         this.isSold = isSold;
         this.registration = registration;
     }
