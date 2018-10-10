@@ -31,15 +31,9 @@ public class CouchCRUD { // REST
         return null;
     }
 
-    public static void putCarDetails(Car car)//String id, String rev,String registration, Boolean isSold //put/update // CustomerSale
+    public static void putCarDetails(Car car) //put/update // CustomerSale
     {
         CouchDbClient dbClient = new CouchDbClient();
-//        Car car = new Car();
-//
-//        car.set_id(id);
-//        car.set_rev(rev);
-//        car.setRegistration(registration);
-//        car.setSold(Boolean.valueOf(isSold));
 
         dbClient.update(car);
         dbClient.shutdown();

@@ -50,6 +50,7 @@ public class Update extends JFrame{
 
                 Car car = new Car();
                 car.set_id(tfCarId.getText());
+                car.set_rev(tfCarRev.getText());
                 car.setSold(Boolean.valueOf(tfIsSold.getText()));
                 car.setRegistration(tfCarRegistration.getText());
                 car.setCarMake(tfCarMake.getText());
