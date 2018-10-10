@@ -83,8 +83,8 @@ public class CouchCRUD { // REST
               "map": "function(doc) {\r\n    emit(doc.carMake, 1);\r\n}",
               "reduce": "_count"
             },
-            "byCarName": {
-               "map": "function(doc)" {if('name' in doc) { emit (doc.carModel, doc._id); }}"
+            "byCarModel": {
+               "map": "function(doc)" {if('Focus' in doc) { emit (doc.carModel, doc._id); }}"
             }
           },
           "language": "javascript"
@@ -92,7 +92,7 @@ public class CouchCRUD { // REST
         */
 
         List<JsonObject> allDocs = dbClient.view("views/byCarMake").reduce(true).group(true).query(JsonObject.class);
-        //List<JsonObject> stuff = dbClient.view("views/byCarMake").reduce(true).key("Ford Fiesta XXX").query(JsonObject.class);
+        //List<JsonObject> stuff = dbClient.view("views/byCarModel").reduce(true).key("Ford Fiesta XXX").query(JsonObject.class);
 
         return allDocs;
     }
