@@ -14,10 +14,28 @@ public class Create extends JFrame{
     private JLabel lblAfter;
     private JTextField tfBefore;
     private JTextField tfCarId;
-    private JTextField tfCarRewgistration;
+    private JTextField tfCarRegistration;
     private JTextField tfSold;
     private JTextField tfAfter;
     private JButton btnCreate;
+    private JLabel lblModel;
+    private JLabel lblMake;
+    private JLabel lblYear;
+    private JLabel lblPrice;
+    private JLabel lblFuelType;
+    private JLabel lblEngineSizeCC;
+    private JLabel lblTransmission;
+    private JLabel lblColor;
+    private JLabel lblNumberOfDoors;
+    private JTextField tfCarMake;
+    private JTextField tfModel;
+    private JTextField tfYear;
+    private JTextField tfPrice;
+    private JTextField tfFuelType;
+    private JTextField tfEngineSizeCC;
+    private JTextField tfTransmission;
+    private JTextField tfColor;
+    private JTextField tfNumberOfDoors;
 
 
     public Create() {
@@ -33,11 +51,19 @@ public class Create extends JFrame{
                 car.set_id(tfCarId.getText());
                 car.set_rev(null);
                 car.setSold(Boolean.valueOf(tfSold.getText()));
-                car.setRegistration(tfCarRewgistration.getText());
+                car.setRegistration(tfCarRegistration.getText());
+                car.setCarMake(tfCarMake.getText());
+                car.setCarModel(tfModel.getText());
+                car.setYear(tfYear.getText());
+                car.setPrice(tfPrice.getText());
+                car.setFuelType(tfFuelType.getText());
+                car.setEngineSizeCC(tfEngineSizeCC.getText());
+                car.setTransmission(tfTransmission.getText());
+                car.setColor(tfColor.getText());
+                car.setNumberOfDoors(tfNumberOfDoors.getText());
 
-                CouchCRUD.postToCouch(car);//carData.get(0),carData.get(1)
+                CouchCRUD.postToCouch(car);
                 tfAfter.setText(String.valueOf(CouchCRUD.listAllDocs()));
-
             }
         });
 

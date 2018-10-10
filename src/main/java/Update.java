@@ -20,6 +20,24 @@ public class Update extends JFrame{
     private JLabel lblCarIsSold;
     private JLabel lblCarRev;
     private JTextField tfAfter;
+    private JLabel lblCarMake;
+    private JLabel lblModel;
+    private JLabel lblYear;
+    private JLabel lblPrice;
+    private JLabel lblFuelType;
+    private JLabel lblEngineSizeCC;
+    private JLabel lblTransmission;
+    private JLabel lblColor;
+    private JLabel lblNumberOfDoors;
+    private JTextField tfCarMake;
+    private JTextField tfModel;
+    private JTextField tfYear;
+    private JTextField tfPrice;
+    private JTextField tfFuelType;
+    private JTextField tfEngineSizeCC;
+    private JTextField tfTransmission;
+    private JTextField tfColor;
+    private JTextField tfNumberOfDoors;
 
     public Update() {
         tfBefore.setText(String.valueOf(CouchCRUD.listAllDocs()));
@@ -28,7 +46,24 @@ public class Update extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                CouchCRUD.putCarDetails(tfCarId.getText(), tfCarRev.getText(),tfCarRegistration.getText(), Boolean.valueOf(tfIsSold.getText()));
+                //CouchCRUD.putCarDetails(tfCarId.getText(), tfCarRev.getText(),tfCarRegistration.getText(), Boolean.valueOf(tfIsSold.getText()));
+
+                Car car = new Car();
+                car.set_id(tfCarId.getText());
+                car.setSold(Boolean.valueOf(tfIsSold.getText()));
+                car.setRegistration(tfCarRegistration.getText());
+                car.setCarMake(tfCarMake.getText());
+                car.setCarModel(tfModel.getText());
+                car.setYear(tfModel.getText());
+                car.setPrice(tfPrice.getText());
+                car.setFuelType(tfFuelType.getText());
+                car.setEngineSizeCC(tfEngineSizeCC.getText());
+                car.setTransmission(tfTransmission.getText());
+                car.setColor(tfColor.getText());
+                car.setNumberOfDoors(tfNumberOfDoors.getText());
+
+                CouchCRUD.putCarDetails(car);
+
                 tfAfter.setText(String.valueOf(CouchCRUD.listAllDocs()));
             }
         });
