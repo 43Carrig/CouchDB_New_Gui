@@ -31,7 +31,7 @@ public class CouchCRUD { // REST
         return null;
     }
 
-    public static void putCarDetails(Car car) //put/update // CustomerSale
+    public static void putCarDetails(Car car) //put/update 
     {
         CouchDbClient dbClient = new CouchDbClient();
 
