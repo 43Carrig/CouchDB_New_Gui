@@ -30,7 +30,7 @@ public class Mapreduce extends JFrame {
         mapreduceButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                mapreduceLabel.setText(String.valueOf(CouchCRUD.simpleMapReduce("couchdb.properties")));
+                mapreduceLabel.setText(String.valueOf(CouchCRUD.byCarMakeMapReduce("couchdb.properties")));
             }
         });
     }

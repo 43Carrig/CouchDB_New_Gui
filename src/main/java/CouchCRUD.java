@@ -31,7 +31,7 @@ public class CouchCRUD { // REST
         return null;
     }
 
-    public static void putCarDetails(Car car) //put/update 
+    public static void putCarDetails(Car car) //put/update
     {
         CouchDbClient dbClient = new CouchDbClient();
 
@@ -70,32 +70,13 @@ public class CouchCRUD { // REST
 
     }
 
-    public static List<JsonObject> simpleMapReduce(String dbName)//String dbName
+    public static List<JsonObject> byCarMakeMapReduce(String dbName)
     {
-        CouchDbClient dbClient = new CouchDbClient(dbName);//dbName
+        CouchDbClient dbClient = new CouchDbClient(dbName);
 
-        /* MapReduce Design Document:
-        {
-          "_id": "_design/views",
-          "_rev": "4-f74a20be55243a45bb3b4e9f2a7f2433",
-          "views": {
-            "byCarMake": {
-              "map": "function(doc) {\r\n    emit(doc.carMake, 1);\r\n}",
-              "reduce": "_count"
-            },
-            "byCarModel": {
-               "map": "function(doc)" {if('Focus' in doc) { emit (doc.carModel, doc._id); }}"
-            }
-          },
-          "language": "javascript"
-        }
-        */
+        List<JsonObject> docs = dbClient.view("views/byCarMake").reduce(true).group(true).query(JsonObject.class);
 
-        List<JsonObject> allDocs = dbClient.view("views/byCarMake").reduce(true).group(true).query(JsonObject.class);
-        //List<JsonObject> stuff = dbClient.view("views/byCarModel").reduce(true).key("Ford Fiesta XXX").query(JsonObject.class);
-
-        return allDocs;
+        return docs;
     }
-
 
 }

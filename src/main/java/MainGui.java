@@ -18,7 +18,7 @@ public class MainGui extends JFrame{
         createButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 JFrame frame = new JFrame("Create");
-                frame.setContentPane(new Create().Main); //
+                frame.setContentPane(new Create().Main);
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 frame.pack();
 //                frame.setSize(350, 350);
@@ -29,7 +29,7 @@ public class MainGui extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 JFrame frame = new JFrame("Read Data");
-                frame.setContentPane(new Read().Main); //
+                frame.setContentPane(new Read().Main);
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 frame.pack();
 //        frame.setSize(300, 1000);
@@ -40,7 +40,7 @@ public class MainGui extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 JFrame frame = new JFrame("Update");
-                frame.setContentPane(new Update().Main); //
+                frame.setContentPane(new Update().Main);
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 frame.pack();
                 frame.setSize(300, 300);

@@ -66,7 +66,7 @@ public class Read extends JFrame {
 
     public static void main(String args[])
     {
-        JFrame frame = new JFrame("Read Data");
+        JFrame frame = new JFrame("Read");
         frame.setContentPane(new Read().Main); //
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
